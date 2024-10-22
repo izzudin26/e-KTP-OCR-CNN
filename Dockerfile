@@ -15,6 +15,7 @@ RUN apt-get install curl -y
 RUN pip install pytesseract
 RUN pip install textdistance
 RUN pip install keras
+RUN pip install tensorflow
 
 COPY . .
 
