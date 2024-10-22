@@ -3,7 +3,7 @@ FROM python:3.9
 WORKDIR /app
 
 RUN pip install flask
-RUN pip install numpy
+RUN pip install numpy==1.26.4
 RUN pip install opencv-contrib-python==4.5.1.48
 RUN pip install pandas
 RUN pip install pillow
