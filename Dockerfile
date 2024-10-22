@@ -7,9 +7,10 @@ RUN pip install numpy
 RUN pip install opencv-contrib-python==4.5.1.48
 RUN pip install pandas
 RUN pip install pillow
-RUN apt-get install tesseract-ocr
-RUN apt-get install tesseract-ocr-ind
-RUN apt-get install curl
+RUN apt-get update -y
+RUN apt-get install tesseract-ocr -y
+RUN apt-get install tesseract-ocr-ind -y
+RUN apt-get install curl -y
 RUN pip install pytesseract
 RUN pip install textdistance
 
