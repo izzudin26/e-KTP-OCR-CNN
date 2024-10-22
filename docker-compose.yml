@@ -1,0 +1,7 @@
+services:
+  ocr-ktp:
+    container_name: ocr-ktp
+    build: .
+    image: ocr-ktp:1.0
+    ports:
+      - 5000:5000

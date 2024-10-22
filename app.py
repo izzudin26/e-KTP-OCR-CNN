@@ -13,7 +13,8 @@ from keras.preprocessing import image
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
-@app.route('/ocr', methods = ['POST'])
+
+@app.route('/ocr', methods=['POST'])
 def upload_file():
     start_time = time.time()
 
@@ -36,8 +37,8 @@ def upload_file():
 
             if isimagektp:
                 (nik, nama, tempat_lahir, tgl_lahir, jenis_kelamin, agama,
-                status_perkawinan, provinsi, kabupaten, alamat, rt_rw, 
-                kel_desa, kecamatan, pekerjaan, kewarganegaraan) = ocr.main(image)
+                 status_perkawinan, provinsi, kabupaten, alamat, rt_rw,
+                 kel_desa, kecamatan, pekerjaan, kewarganegaraan) = ocr.main(image)
 
                 finish_time = time.time() - start_time
 
@@ -83,5 +84,6 @@ def upload_file():
                 'message': 'Maaf, KTP tidak terdeteksi'
             })
 
+
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug=True, port="5000")
