@@ -23,6 +23,7 @@ RUN curl https://s24.filetransfer.io/storage/download/mSxxkPnc6OQn -o model.h5
 
 RUN mkdir data/cnn
 RUN mv model.h5 data/cnn/model.h5
+RUN echo $(ls -a data/cnn)
 
 EXPOSE 5000
 
