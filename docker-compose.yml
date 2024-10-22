@@ -1,5 +1,6 @@
 services:
   ocr-ktp:
+    restart: always
     container_name: ocr-ktp
     build: .
     image: ocr-ktp:1.0
