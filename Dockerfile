@@ -8,6 +8,7 @@ RUN pip install opencv-contrib-python==4.5.1.48
 RUN pip install pandas
 RUN pip install pillow
 RUN apt-get update -y
+RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN apt-get install tesseract-ocr -y
 RUN apt-get install tesseract-ocr-ind -y
 RUN apt-get install curl -y
