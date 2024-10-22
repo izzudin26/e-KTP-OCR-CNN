@@ -9,10 +9,16 @@ RUN pip install pandas
 RUN pip install pillow
 RUN apt-get install tesseract-ocr
 RUN apt-get install tesseract-ocr-ind
+RUN apt-get install curl
 RUN pip install pytesseract
 RUN pip install textdistance
 
 COPY . .
+
+RUN curl https://s24.filetransfer.io/storage/download/mSxxkPnc6OQn -o model.h5
+
+RUN mkdir data/cnn
+RUN mv model.h5 data/cnn
 
 EXPOSE 5000
 
